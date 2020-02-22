@@ -1,8 +1,18 @@
 {% extends 'base.html' %} {% load crispy_forms_tags %} {% block title %} Log In
 {% endblock title %} {% block content %}
 <h2 style="margin: 50px 0 50px 0; text-align:center;">LogIn</h2>
-<form style="width:500px; margin:auto;" action="" method="post">
-  {% csrf_token %} {{ form|crispy }}
-  <button class="btn btn-success ml-􀇑" type="submit">LogIn</button>
-</form>
+<div
+  style="width: 600px; margin:auto;"
+  class="shadow p-3 mb-5 bg-white rounded"
+>
+  <form
+    style="width:500px; margin:auto; padding:25px 0 25px 0;"
+    action=""
+    method="post"
+  >
+    {% csrf_token %} {{ form|crispy }}
+    <button class="btn btn-success ml-􀇑" type="submit">LogIn</button>
+  </form>
+</div>
+
 {% endblock content %}
