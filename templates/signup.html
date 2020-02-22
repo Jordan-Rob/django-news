@@ -3,8 +3,18 @@
 <h2 style="text-align: center;  margin-bottom:50px; margin-top:50px;">
   SignUp
 </h2>
-<form style="width: 500px; margin:auto;" action="" method="post">
-  {% csrf_token %} {{ form|crispy }}
-  <button class="btn btn-success" type="submit">SignUp</button>
-</form>
+<div
+  style="width: 600px; margin:auto;"
+  class="shadow p-3 mb-5 bg-white rounded"
+>
+  <form
+    style="width: 500px; margin:auto; padding:25px 0 25px 0"
+    action=""
+    method="post"
+  >
+    {% csrf_token %} {{ form|crispy }}
+    <button class="btn btn-success" type="submit">SignUp</button>
+  </form>
+</div>
+
 {% endblock content %}
