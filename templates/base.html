@@ -20,6 +20,11 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             {% if user.is_authenticated %}
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a href="{% url 'article_new'  %}">+ New</a>
+                    </li>
+                </ul>
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
                         <a href="#" class="nav-link dropdown-toggle"
@@ -35,6 +40,7 @@
                         </div>
                     </li>
                 </ul>
+                
             {%else %}
                 <form action="" method="POST" class="form-inline ml-auto">
                     <a class="btn btn-outline-secondary" href="{% url 'login' %}">LogIn</a>

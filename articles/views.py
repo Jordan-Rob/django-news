@@ -22,7 +22,8 @@ class ArticleListView(ListView):
 
 class ArticleCreateView(CreateView):
     model = Article
-    template_name = 'article_create.html'
+    fields = ('title', 'body', 'author')
+    template_name = 'article_new.html'
 
 
 class ArticleDetailView(DetailView):
